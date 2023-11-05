@@ -31,6 +31,17 @@ body {
   border-radius: 10px; /* Rounded corners */
 }
 
+.star,
+.star2 {
+  background-color: #FFB6C1; /* Baby pink background */
+  /*background-image: url('https://media.giphy.com/media/ECWLeGxcKasCc/giphy.gif'); /* Sparkly GIF background */
+  /*background-image: url('https://media.giphy.com/media/x8Jmfuz6xbVCM/giphy.gif'); /* Glitter GIF */
+  background-image: url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif'); /* Sparkle GIF */
+  color: brown; /* White text color */
+  padding: 15px; /* Some padding around the text */
+  border-radius: 10px; /* Rounded corners */
+}
+
 .love-message input[type="text"] {
   background-color: transparent; /* Make the input's background transparent */
   border: none; /* Remove the border */
@@ -49,8 +60,25 @@ body {
   font-weight: bold;
 }
 
+.star input[type="text"],
+.star2 input[type="text"] {
+  background-color: transparent; /* Make the textarea's background transparent */
+  border: none; /* Remove the border */
+  color: inherit; /* Inherit the color from the parent which is white */
+  font-size: inherit; /* Inherit the font-size from the parent */
+  font-weight: bold;
+  width: 100%; /* Take the full width of the parent */
+  height: auto; /* Adjust the height automatically based on content */
+  padding: 10px; /* Add some padding inside the textarea */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  resize: none; /* Disable resizing */
+  overflow: hidden; /* Hide the scrollbar */
+}
+
 .love-message,
-.love-message2 {
+.love-message2,
+.star,
+.star2 {
   visibility: visible;
   opacity: 1;
 }
@@ -69,9 +97,29 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.star {
+  position: fixed !important;
+  bottom: 30% !important;
+  left: 10% !important;
+  transform: translate(-50%, -50%);
+}
+
+.star2 {
+  position: fixed !important;
+  bottom: 30% !important;
+  right: -3% !important;
+  transform: translate(-50%, -50%);
+}
+
+
 .love-message,
 .love-message2 {
   animation: color-change 9s infinite, party 8s;
+}
+
+.star,
+.star2 {
+  animation: party 8s;
 }
 
 @keyframes color-change {
